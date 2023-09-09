@@ -1,0 +1,18 @@
+﻿1, Muốn Ragdoll rơi chậm
+Giảm gravity
+Có thể giảm bằng cách điều chỉnh thông số GravityFactor của RagdollAnimator
+
+2, Giảm xóc cho các muscle
+Dùng 1 hoặc kết hợp các cách sau:
+
+- Giảm gravity
+- ConfigurableJoint: Tăng PositionDamper trong AngularXDrive và AngularYZDrive
+- Rigidbody: Tăng drag, angularDrag
+
+3, Cầm vật nặng mà không muốn muscle quá cứng
+Giảm gravity của vật. Có thể giảm bằng cách tạo script giảm gravity rồi add vào. Tránh giảm trong ProjectSetting vì sẽ ảnh hưởng tất cả
+
+4, Muốn dễ ngã nhưng vẫn có thể đứng dậy
+
+- Điều chỉnh muscleStrengthCurve trong ConfigrableRagdollBalancer. Curve sẽ dựa trên độ lệch góc giữa rotation của TargetBone và FollowBone
+- Giảm gravity của riêng rootBone(thường là Hip)

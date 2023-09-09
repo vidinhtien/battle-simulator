@@ -1,0 +1,28 @@
+Được phát triển dựa trên tư tưởng càng đơn giản càng tốt.
+Graph tập trung vào mô tả luồng. Với mục tiêu thiết kế trước, code sau.
+
+
+1, Transition, SetTrigger
+Transition là sự chuyển tiếp từ state này sang state khác
+SetTrigger dựa trên currentState để xem có transition nào thỏa mãn hay không để thực hiện Transition
+
+2, Queue
+Được thiết kế theo nguyên tắc tránh các hàm callback lồng nhau.
+
+Ví dụ 1: Nếu gọi Transition trong OnStateEnter. Thì Transition sẽ được queue lại,
+thực hiện hoàn toàn OnStateEnter, sau đó OnStateExit, rồi mới OnStateEnter của nextState.
+
+Ví dụ 2: Nếu gọi Transition trong OnStateExit. Thì sẽ không được gọi vì khi 1 state exit thì sẽ ko thể Transition nữa
+vì OnStateExit xảy ra bởi quá trình Transition hoặc StopGraph, vì vậy ko thể có Transition nữa.
+
+Ví dụ 3: Tất cả các thao tác Add/Remove state/transition trong các khối callBack cũng đều đc queue.
+Cho phép queue nhiều thao tác Add/Remove
+
+Lưu ý: Chính vì cơ chế queue này mà nếu gọi Transition bên trong các khối callBack thì sẽ ko nhận đc sự thay đổi của trạng thái graph
+ngay dưới dòng code gọi Transition/SetTrigger.
+Còn nếu gọi từ bên ngoài các khối callBack thì sẽ nhận được sự thay đổi ngay.
+
+
+3, OnStateExit
+Trong OnStateExit, sẽ nhận được nextState nếu là chuyển sang state mới, nếu là null thì là StopGraph
+Nếu là StopGraph, trong OnStateExit mà check sẽ nhận đc trạng thái StopGraph

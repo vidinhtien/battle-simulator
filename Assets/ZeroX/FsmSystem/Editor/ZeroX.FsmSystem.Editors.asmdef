@@ -1,0 +1,18 @@
+{
+    "name": "ZeroX.FsmSystem.Editors",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0c3c17eb95ff4914a06a1e44b328fd1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

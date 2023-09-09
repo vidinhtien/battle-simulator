@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bf9adb155543c2b239c7b0b98e901a, type: 3}
+  m_Name: Test Not Main
+  m_EditorClassIdentifier: 
+  listRow:
+  - id: enemy_10
+    type: 0
+    powerLevel: 10
+    range:
+      min: 20
+      max: 30
+    listReward:
+    - coin
+    - gem
+    des1: "Lo\u1EA1i qu\xE1i kh\xE1 y\u1EBFu\nNh\u01B0ng t\u1ED1c \u0111\u1ED9 t\u1EA5n
+      c\xF4ng nhanh"
+    des2: "Ch\u1EE7 y\u1EBFu sinh s\u1ED1ng \u1EDF r\u1EEBng\nKhu v\u1EF1c A"
+  - id: enemy_11
+    type: 0
+    powerLevel: 12
+    range:
+      min: 25
+      max: 35
+    listReward:
+    - coin
+    - gem
+    - weapon_1
+    des1: "Lo\u1EA1i qu\xE1i trung b\xECnh\nT\u1ED1c \u0111\u1ED9 \u0111\xE1nh v\u1EEBa"
+    des2: "Ch\u1EE7 y\u1EBFu sinh s\u1ED1ng \u1EDF ven s\xF4ng\nKhu v\u1EF1c B"
+  - id: enemy_12
+    type: 1
+    powerLevel: 50
+    range:
+      min: 80
+      max: 100
+    listReward:
+    - coin
+    - gem
+    - weapon_1
+    - armor_1
+    des1: "Lo\u1EA1i qu\xE1i kh\u1ECFe\nT\u1ED1c \u0111\u1ED9 \u0111\xE1nh ch\u1EADm"
+    des2: "Ch\u1EE7 y\u1EBFu sinh s\u1ED1ng \u1EDF v\xF9ng n\xFAi\nKhu v\u1EF1c C"

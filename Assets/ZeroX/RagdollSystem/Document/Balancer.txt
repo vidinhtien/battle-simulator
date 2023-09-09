@@ -1,0 +1,6 @@
+﻿Cần hiểu rõ về KeepBalance và LostBalance của Balancer
+
+KeepBalance/LostBalance đại diện cho việc bật tắt sự cân bằng của ragdoll chứ ko phải là ko sử dụng Balancer nữa.
+Tức Balancer vẫn kiểm soát muscle cần thiết cho sự cân bằng, LostBalance cũng là 1 dạng kiểm soát khiến ragdoll có thể ngã ra
+
+Còn ko sử dụng Balancer nữa có nghĩa Balancer ko kiểm soát muscle nữa, lúc này ragdoll có thể đứng hoặc ngã, tùy vào cấu hình của ConfigurableJoint

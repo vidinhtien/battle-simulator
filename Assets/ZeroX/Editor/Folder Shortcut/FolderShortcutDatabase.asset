@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb8ee040a784fefb55c3cae88e14b96, type: 3}
+  m_Name: FolderShortcutDatabase
+  m_EditorClassIdentifier: 
+  folderViewMode: 0
+  listFolderData:
+  - displayName: Character - Model
+    folderName: FBX
+    folderObject: {fileID: 102900000, guid: c97fc9555105aea4b85553d985479415, type: 3}
+    buttonColor: {r: 0, g: 0, b: 0, a: 1}
+    treeIndex: 0
+    foldOut: 0
+  - displayName: Character - Prefab
+    folderName: Character
+    folderObject: {fileID: 102900000, guid: cb49e1459c5c9714f9506ed9f6552e1e, type: 3}
+    buttonColor: {r: 0, g: 0, b: 0, a: 1}
+    treeIndex: 1
+    foldOut: 0
+  - displayName: Character - Clip
+    folderName: Character
+    folderObject: {fileID: 102900000, guid: c9aa62be2e83aff4f9d0d21252acfe8b, type: 3}
+    buttonColor: {r: 0, g: 0, b: 0, a: 1}
+    treeIndex: 2
+    foldOut: 0
+  - displayName: Character - Animator
+    folderName: Character
+    folderObject: {fileID: 102900000, guid: 75c21b770369e624ba6e941b723f0b94, type: 3}
+    buttonColor: {r: 0, g: 0, b: 0, a: 1}
+    treeIndex: 3
+    foldOut: 0
+  - displayName: Bullet
+    folderName: Bullet
+    folderObject: {fileID: 102900000, guid: 0532c7b0b1dedda4d9fafb9fabfaa023, type: 3}
+    buttonColor: {r: 0, g: 0, b: 0, a: 1}
+    treeIndex: 4
+    foldOut: 0

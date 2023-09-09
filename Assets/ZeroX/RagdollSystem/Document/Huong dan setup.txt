@@ -1,0 +1,52 @@
+﻿1, Tạo Collider, Rigidbody và Joint
+B1: Kéo model lên scene
+B2: Thêm component BipedRagdollCreator và nhấn Create a Ragdoll
+B3: Options hiện ra, tùy chỉnh theo ý muốn và nhấn Done hoặc Start Editing Manually để sang luôn mục 2
+
+
+
+2, Edit Ragdoll đã tạo
+B1: Add component RagdollEditor
+B2: Tùy chỉnh mass nếu muốn, thường set về 50
+B3: Tùy chỉnh setting trong mục Configurable Joints Config sau đó nhấn Apply Joint Config
+B4: Assign các Physic Material nếu chưa có và nhấn Apply Physic Material
+B5: Có thể remove component RagdollEditor
+
+Bonus
+Lúc này đã có 1 con ragdoll lủng lẳng nhưng chưa chạy theo animation. Đã có thể dùng luôn cho các trường hợp ko cần animation
+Nhưng lúc này phần Root Joint(thường là Pelvis, Hip) đã bị khóa motion nên sẽ bị treo lủng lẳng
+Tìm đến Root Joint và set các X,Y,Z Motion về Free là được
+
+
+
+3, Setup object để có 1 Ragdoll chạy theo animation
+Sau 2 mục trên đã có 1 con ragdoll nhưng vẫn chưa chạy được với animation
+Cần làm theo các bước sau:
+
+Bước 1:
+Tạo 1 gameobject trống, đại diện cho nhân vật, tạm gọi là Agent
+Kéo model gốc với animator vào Agent, nên đặt tên là Target Pose
+Kéo ragdoll vừa tạo vào Agent, nên đặt tên là Follow Pose
+
+Mô hình như sau:
+Character
+   Target Pose
+   Follow Pose
+   
+   
+Bước 2:
+Add component RagdollAnimator
+Assign 2 biến targetPose và followPose
+Nhấn các button chức năng editor bên dưới để setup nhanh chóng
+
+Bước 4:
+Add component RagdollBalancer nếu muốn cân bằng ragdoll
+Khuyên dùng ConfigurableRagdollBalancer
+Assign component vừa thêm vào biến trong RagdollAnimator
+
+Bước 5:
+Thêm RagdollTransformSyncer nếu muốn đồng bộ transform của parent theo bộ ragdoll
+Khuyên dùng BoundRagdollTransformSyncer
+Assign component vừa thêm vào biến trong RagdollAnimator
+
+Bước 6: Play

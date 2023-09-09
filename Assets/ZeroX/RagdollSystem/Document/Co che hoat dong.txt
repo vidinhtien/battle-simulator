@@ -1,0 +1,27 @@
+﻿Dựa vào cơ chế Target Rotation của ConfigurableJoint để xoay các khớp theo mục tiêu. Lực xoay dựa vào spring
+
+Khớp root sẽ đặc biệt hơn và chịu nhiều trách nhiệm hơn
+Nếu mở khóa position thì root joint có thể lắc lưc nhưng vẫn xoay theo target. Tạo hiệu ứng ragdoll ko bị ghim position nhưng vẫn đi giữ được cân bằng.
+Như vậy để ragdoll đổ ra thì chỉ cần đặt spring của rootJoint về 0 là root joint sẽ ko còn xoay theo target nữa, mất cân bằng và xoay tự do.
+Tuy nhiên các childJoint vẫn xoay theo target -> tạo hiệu ứng ragdoll vẫn theo animation nhưng xoay tự do
+
+Vậy câu hỏi đặt ra là có cách nào giữ đc cân bằng theo 1 trục ko. Ví dụ đứng được nhưng xoay theo chiều nào cũng đc, cái này khó nha
+
+Như vậy về cơ bản đều là cách điều chỉnh rootJoint và spring
+Lưu ý Joint gốc cần set configuredInWorldSpace để ragdoll có thể xoay theo object cha 
+
+
+
+Dưới đây là các setting với rootJoint và kết quả hiệu ứng
+
+X,Y,Z Motion Locked + Spring > 0          ----->        RootJoint bị ghim tại 1 điểm và RootJoint xoay theo TargetBone
+
+X,Y,Z Motion Locked + Spring == 0         ----->        RootJoint bị ghim tại 1 điểm và RootJoint ko xoay theo TargetBone
+
+X,Y,Z Motion Free + Spring > 0            ----->        RootJoint ko bị ghim và RootJoint cố gắng xoay theo target
+                                                        Ragdoll có thể giữ thăng bằng mà ko cần ghim tại 1 điểm
+														
+X,Y,Z Motion Free + Spring == 0           ----->        RootJoint ko bị ghim và ko cố gắng xoay theo target
+                                                        Ragdoll không giữ thăng bằng, đổ và rơi tự do
+                                                        
+                                                        

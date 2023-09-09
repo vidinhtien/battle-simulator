@@ -1,0 +1,10 @@
+﻿1, MuscleData
+
+muscleWeight: là hệ số thể hiện mức độ cơ bắp, số càng to có nghĩa cơ bắp đó càng mạnh. Tuy nhiên để theo dạng tỉ lệ giữa các cơ bắp, ví dụ cơ bắp A là 0.8, cơ bắp B là 1
+
+muscleWeightFactor: là hệ số nhân với muscleWeight, thích hợp khi muốn điều chỉnh muscleWeight mà ko muốn mất đi giá trị muscleWeight gốc
+
+
+2, Ragdoll Animator
+masterMuscleWeight: hệ số này nhân với muscleWeight và muscleWeightFactor của MuscleData. Hệ số này đại diện cho muscleWeight thực, ví dụ 100
+masterMuscleWeightFactor: hệ số này nhân với masterMuscleWeight, muscleWeight và muscleWeightFactor của MuscleData/

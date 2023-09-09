@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f57ba629eb36469aaa4820f9b92a2c48
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - selectedRigidbody: {instanceID: 0}
+  - selectedCollider: {instanceID: 0}
+  - feetPhysicMaterial: {fileID: 13400000, guid: 332e98956431eb94a8073500245713f6, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
